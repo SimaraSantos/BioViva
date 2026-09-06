@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "id": 123456789,
+      "observed_on": "2026-08-20",
+      "taxon": {
+        "preferred_common_name": "Onca-pintada",
+        "name": "Panthera onca",
+        "iconic_taxon_name": "Mammalia",
+        "default_photo": {
+          "medium_url": "https://static.inaturalist.org/photos/123456/medium.jpg"
+        }
+      },
+      "geojson": {
+        "coordinates": [-55.123, -3.119]
+      }
+    }
+  ]
+}

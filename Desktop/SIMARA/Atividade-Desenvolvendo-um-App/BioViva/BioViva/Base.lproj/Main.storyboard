@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="navigationController">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="navigationScene">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="navigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="navigationBar">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="homeViewController" kind="relationship" relationship="rootViewController" id="navigationToHome"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="navigationFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1510" y="-70"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="homeScene">
+            <objects>
+                <viewController id="homeViewController" customClass="HomeViewController" customModule="BioViva" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="BioViva" id="homeNavigationItem"/>
+                    <view key="view" contentMode="scaleToFill" id="homeView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="homeSafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="observationsViewController" kind="show" identifier="showObservations" id="homeToObservations"/>
+                        <segue destination="newSightingViewController" kind="show" identifier="showNewSighting" id="homeToNewSighting"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="homeFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="-70"/>
+        </scene>
+        <!--Observations View Controller-->
+        <scene sceneID="observationsScene">
+            <objects>
+                <viewController id="observationsViewController" customClass="ObservationsViewController" customModule="BioViva" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Observacoes" id="observationsNavigationItem"/>
+                    <view key="view" contentMode="scaleToFill" id="observationsView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="observationsSafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="mapViewController" kind="show" identifier="showMap" id="observationsToMap"/>
+                        <segue destination="observationDetailViewController" kind="show" identifier="showObservationDetail" id="observationsToDetail"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="observationsFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="-70"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="mapScene">
+            <objects>
+                <viewController id="mapViewController" customClass="MapViewController" customModule="BioViva" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Mapa" id="mapNavigationItem"/>
+                    <view key="view" contentMode="scaleToFill" id="mapView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mapFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="-310"/>
+        </scene>
+        <!--Observation Detail View Controller-->
+        <scene sceneID="observationDetailScene">
+            <objects>
+                <viewController id="observationDetailViewController" customClass="ObservationDetailViewController" customModule="BioViva" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Detalhe do avistamento" id="observationDetailNavigationItem"/>
+                    <view key="view" contentMode="scaleToFill" id="observationDetailView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="observationDetailFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="170"/>
+        </scene>
+        <!--New Sighting View Controller-->
+        <scene sceneID="newSightingScene">
+            <objects>
+                <viewController id="newSightingViewController" customClass="NewSightingViewController" customModule="BioViva" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Novo avistamento" id="newSightingNavigationItem"/>
+                    <view key="view" contentMode="scaleToFill" id="newSightingView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="newSightingFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="500"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

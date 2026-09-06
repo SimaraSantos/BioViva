@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="launchScreenViewController">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="System symbols" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="launchScreenScene">
+            <objects>
+                <viewController id="launchScreenViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="launchScreenView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" image="leaf.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="leafImageView">
+                                <rect key="frame" x="156.5" y="318" width="80" height="80"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BioViva" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brandLabel">
+                                <rect key="frame" x="107.5" y="422" width="178" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descubra e proteja a biodiversidade" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="subtitleLabel">
+                                <rect key="frame" x="60" y="481" width="273" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="launchScreenSafeArea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="leafImageView" firstAttribute="centerX" secondItem="launchScreenSafeArea" secondAttribute="centerX" id="leafCenterX"/>
+                            <constraint firstItem="leafImageView" firstAttribute="width" constant="80" id="leafWidth"/>
+                            <constraint firstItem="leafImageView" firstAttribute="height" constant="80" id="leafHeight"/>
+                            <constraint firstItem="brandLabel" firstAttribute="top" secondItem="leafImageView" secondAttribute="bottom" constant="24" id="brandTop"/>
+                            <constraint firstItem="brandLabel" firstAttribute="centerX" secondItem="launchScreenSafeArea" secondAttribute="centerX" id="brandCenterX"/>
+                            <constraint firstItem="subtitleLabel" firstAttribute="top" secondItem="brandLabel" secondAttribute="bottom" constant="12" id="subtitleTop"/>
+                            <constraint firstItem="subtitleLabel" firstAttribute="leading" secondItem="launchScreenSafeArea" secondAttribute="leading" constant="32" id="subtitleLeading"/>
+                            <constraint firstItem="launchScreenSafeArea" firstAttribute="trailing" secondItem="subtitleLabel" secondAttribute="trailing" constant="32" id="subtitleTrailing"/>
+                            <constraint firstItem="brandLabel" firstAttribute="centerY" secondItem="launchScreenSafeArea" secondAttribute="centerY" constant="-18" id="brandCenterY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="launchScreenFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="leaf.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215690000003" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
